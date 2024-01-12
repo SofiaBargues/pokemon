@@ -54,19 +54,20 @@ export default function App() {
     }
   }
 
-  const backgroundImageStyle = {
-    backgroundImage: `url('https://i.pinimg.com/originals/ca/e0/1a/cae01ab5cce960db0d7819cc96e97ce8.png')`,
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    backgroundRepeat: "no-repeat",
-    height: "100vh", // Ajusta la altura según tus necesidades
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "center",
-  };
   return (
-    <div style={backgroundImageStyle}>
+    <div
+      style={{
+        backgroundImage: `url('https://i.pinimg.com/originals/ca/e0/1a/cae01ab5cce960db0d7819cc96e97ce8.png')`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        height: "100vh", // Ajusta la altura según tus necesidades
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
       <img
         width={512}
         height={512}
