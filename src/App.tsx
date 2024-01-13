@@ -81,7 +81,7 @@ export default function App() {
         alt=""
       />
       {hasWon ? (
-        <button style={{ width: "100%" }} onClick={() => location.reload}>
+        <button style={{}} onClick={() => location.reload()}>
           Play again
         </button>
       ) : (
