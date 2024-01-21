@@ -109,7 +109,7 @@ export default function App() {
             style={{ width: "300px", padding: "10px", marginBottom: "10px" }}
           />
           <button type="submit" style={{ width: "200px", padding: "10px" }}>
-            Enviar
+            Submit
           </button>
         </form>
       )}
