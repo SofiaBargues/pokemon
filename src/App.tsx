@@ -40,7 +40,7 @@ type Form = HTMLFormElement & {
 
 export default function App() {
   const [hasWon, toggleWon] = useState(false);
-  const [guessedPokemon, setGuessedPokemon] = useState<string | null>(null);
+  const [_, setGuessedPokemon] = useState<string | null>(null);
 
   function handleSubmit(event: React.FormEvent<Form>) {
     event.preventDefault();
