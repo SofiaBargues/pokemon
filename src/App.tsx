@@ -40,14 +40,16 @@ type Form = HTMLFormElement & {
 
 export default function App() {
   const [hasWon, toggleWon] = useState(false);
+  const [guessedPokemon, setGuessedPokemon] = useState<string | null>(null);
 
   function handleSubmit(event: React.FormEvent<Form>) {
     event.preventDefault();
     const { pokemon } = event.currentTarget;
+    const guessedPokemonName = pokemon.value.toLocaleLowerCase();
 
-    if (pokemon.value.toLocaleLowerCase() === POKEMONS[MATCH]) {
+    if (guessedPokemonName === POKEMONS[MATCH]) {
+      setGuessedPokemon(guessedPokemonName);
       toggleWon(true);
-      alert("You won!");
     } else {
       alert("Wrong answer!");
     }
@@ -80,13 +82,35 @@ export default function App() {
         alt=""
       />
       {hasWon ? (
-        <button style={{}} onClick={() => location.reload()}>
+        <button
+          style={{ width: "200px", padding: "10px" }}
+          onClick={() => location.reload()}
+        >
           Play again
         </button>
       ) : (
-        <form onSubmit={handleSubmit}>
-          <input autoFocus type="text" name="pokemon" />
-          <button type="submit">Submit</button>
+        // <form onSubmit={handleSubmit}>
+        //   <input  autoFocus type="text" name="pokemon" />
+        //   <button type="submit">Submit</button>
+        // </form>
+
+        <form
+          onSubmit={handleSubmit}
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
+          <input
+            autoFocus
+            type="text"
+            name="pokemon"
+            style={{ width: "300px", padding: "10px", marginBottom: "10px" }}
+          />
+          <button type="submit" style={{ width: "200px", padding: "10px" }}>
+            Enviar
+          </button>
         </form>
       )}
     </div>
