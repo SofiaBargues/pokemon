@@ -29,8 +29,7 @@ const POKEMONS = [
   "raichu",
   "sandshrew",
   "sandslash",
-  "nidoran♀",
-  "nidorina",
+  "nidoran",
 ];
 
 const MATCH = Math.floor(Math.random() * POKEMONS.length);
